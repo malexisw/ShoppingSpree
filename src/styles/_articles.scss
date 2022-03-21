@@ -1,0 +1,128 @@
+.articles {
+  position: relative;
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li.articlesLi {
+      position: relative;
+      cursor: pointer;
+      flex: 0 0 calc(25% - 10px);
+      min-width: 0;
+
+      margin: 5px;
+
+      .img-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .desc-text {
+        display: flex;
+        align-items: center;
+        margin: 5px 0 15px;
+        font-size: 0.7em;
+
+        .name,
+        .color {
+          margin-right: 5px;
+        }
+
+        .brand {
+          font-size: 0.9em;
+          font-weight: bold;
+        }
+      }
+
+      .price {
+        font-size: 0.9em;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .cardSize {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: calc(100% - 10px);
+    height: auto;
+    bottom: 10px;
+    background: $base-color;
+    opacity: 0.8;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    p {
+      text-align: center;
+      font-size: 0.8em;
+      margin-bottom: 5px;
+      max-width: 100%;
+    }
+    ul {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $bg-color;
+        background: $base-color;
+        border: solid 1px $bg-color;
+        border-radius: 5px;
+        min-width: fit-content;
+        width: 40px;
+        height: 30px;
+        font-size: 0.7em;
+        font-weight: 600;
+        padding: 0 4px;
+      }
+
+      li:hover {
+        background: #d9dadb;
+      }
+    }
+  }
+
+  .articlesLi:hover {
+    .cardSize {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .articles {
+    .cardSize {
+      bottom: 3px;
+      p {
+        font-size: 0.6em;
+      }
+      ul {
+        li {
+          font-size: 0.5em;
+          width: 20px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .articles {
+    .articlesLi:hover {
+      .cardSize {
+        display: none;
+      }
+    }
+  }
+}

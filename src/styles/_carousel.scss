@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.carousel {
+  display: flex;
+  width: 300%;
+  height: auto;
+  overflow: hidden;
+
+  .carouselCard {
+    width: 34%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.7s ease;
+
+    h1 {
+      position: absolute;
+      color: $base-color;
+    }
+
+    h1.title0 {
+      font-family: "Bebas Neue", cursive;
+      right: 0;
+      top: 50%;
+      transform: translateX(-50%);
+      color: $bg-color;
+      font-size: 3em;
+    }
+
+    h1.title1 {
+      font-family: "Sansita Swashed", cursive;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 50px;
+      color: $bg-color;
+    }
+
+    h1.title2 {
+      font-family: "BhuTuka Expanded One", cursive;
+      left: 55%;
+      top: 50%;
+      transform: translateX(-50);
+      color: $base-color;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+    .carousel {
+        .carouselCard {
+          height: 450px;
+
+          h1.title2 {
+            width: 100%;
+            left: 10px;
+            top: 0;
+            font-size: 1.5em;
+            text-align: center;
+          }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+  .carousel {
+    .carouselCard {
+      height: 300px;
+
+      h1.title0 {
+        left: 0;
+        transform: translateX(0);
+        width: 100%;
+        text-align: center;
+      }
+      h1.title1 {
+        margin-top: 5px;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      h1.title2 {
+        width: 100%;
+        left: 10px;
+        top: 0;
+        font-size: 1.5em;
+      }
+    }
+  }
+}

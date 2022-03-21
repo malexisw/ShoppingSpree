@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+header {
+  background: #fff;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  font-size: 1em;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  h1 {
+    font-family: "Pacifico", cursive;
+  }
+
+  a {
+    text-decoration: none;
+    color: $bg-color;
+  }
+
+  ul.listAll {
+    width: 100%;
+    height: 100%;
+
+    .genderList,
+    .accountList {
+      justify-content: center;
+      li {
+        padding: 5px;
+        width: fit-content;
+        text-align: center;
+        transition: all 0.1s ease;
+      }
+      li:hover {
+        cursor: pointer;
+        background: rgb(240, 240, 240);
+      }
+      li:active {
+        background: rgb(231, 230, 230);
+      }
+      .card {
+        position: absolute;
+        left: 0px;
+        top: 95%;
+        z-index: 1;
+
+        .inCard {
+          width: 100%;
+          background: $base-color;
+          a, .link.loginProfil {
+            display: flex;
+            align-items: center;
+
+            svg {
+              font-size: 0.7em;
+              margin-right: 3px;
+            }
+            p {
+              font-size: 0.6em;
+              white-space: nowrap;
+            }
+          }
+        }
+
+        .inCard:active {
+          background: rgb(240, 240, 240);
+        }
+        .inCard:hover {
+          background: rgb(240, 240, 240);
+        }
+      }
+    }
+
+    
+    .accountList.sizeDown {
+      font-size: 1.3em;
+      width: 100%;
+      justify-content: space-around;
+      li {
+        position: relative;
+      }
+
+      li:not(:last-child) {
+        margin-right: 10px;
+      }
+      p{
+        font-size: .8em;
+      }
+    }
+    
+  }
+
+  .cartLi {
+    position: relative;
+    display: flex;
+
+    .cart-count {
+      position: absolute;
+      background: orange;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      text-align: center;
+      font-size: 10px;
+      font-weight: bold;
+      bottom: 0;
+      left: 10px;
+    }
+  }
+
+  .cartLi.logo {
+    .cart-count {
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    ul.listAll {
+      li.gender {
+        display: none;
+      }
+      ul {
+        li:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+    .account{
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    h1 {
+      font-size: 1.8em;
+    }
+    ul.listAll {
+      li.gender {
+        display: none;
+      }
+      ul {
+        li:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+    
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header {
+    h1 {
+      font-size: 1.1em;
+    }
+    ul.listAll {
+      li.gender {
+        display: none;
+      }
+      ul {
+        li:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+      .accountList.sizeDown {
+        font-size: 1em;
+        width: 100%;
+        justify-content: space-around;
+        li {
+          position: relative;
+        }
+  
+        li:not(:last-child) {
+          margin-right: 10px;
+        }
+        p{
+          font-size: .8em;
+        }
+      }
+    }
+    
+  }
+}

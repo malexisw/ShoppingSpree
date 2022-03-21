@@ -1,0 +1,55 @@
+$base-color: #f5f6f8;
+$bg-color: #2f2f2f;
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#App{
+    position: relative;
+    background: #fff;
+    min-height: 100vh;
+    height: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    color: $bg-color;
+}
+
+a{
+    text-decoration: none;
+}
+
+a.back{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: initial;
+    width: fit-content;
+    padding: 5px;
+    transition: all .2s ease;
+    svg{
+        margin-right: 5px;
+    }
+}
+
+a.back:hover{
+    background: rgb(231, 230, 230);
+}
+
+@media screen and (max-width: 1000px) {
+    #App{
+      width: 95%;
+    }
+  }
